@@ -1,7 +1,12 @@
 package src;
-import java.util.Random;
 
 public class Temperature extends Sensor{
+
+    int id;
+    public Temperature(){
+        this.id = super.id++;
+        super.id++;
+    }
     @Override
     public double getValue() {
         return measureValue();
