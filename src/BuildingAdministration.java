@@ -23,17 +23,22 @@ public class BuildingAdministration {
         return;
     }
 
-    public Building getBuilding(Building building) {
+    public static Building getBuilding(Building building) {
         return building;
     }
 
     public static void printBuildings() {
-        for(int i = 0; i < buildings.size(); i++) {
-            System.out.println(buildings);
-        }
+        System.out.println(buildings);
     }
     public static void main(String[] args) {
-        BuildingAdministration.
+        buildings.add(new Building("House"));
+        buildings.add(new Building("Hospital"));
+        buildings.add(new Building("Home"));
         printBuildings();
+        getBuilding(buildings.get(1)).addActuator(new VentilationActuator());
+        getBuilding(buildings.get(1)).addSensor(new Temperature());
+        getBuilding(buildings.get(1)).addSensor(new CO2());
+        System.out.println("");
+
     }
 }
