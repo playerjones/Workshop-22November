@@ -2,8 +2,14 @@ package src;
 import java.util.ArrayList;
 
 public class Building {
-    ArrayList Sensors = new ArrayList(1);
-    ArrayList Actuators = new ArrayList(0);
+    ArrayList<String> Sensors = new ArrayList<>(1);
+    ArrayList<String> Actuators = new ArrayList<>(0);
+
+    String name;
+
+    public Building(String name) {
+        this.name = name;
+    }
 
     public void addSensor(String sensors) {
         Sensors.add(sensors);
@@ -21,4 +27,11 @@ public class Building {
         Actuators.remove(actuator);
     }
 
+    @Override
+    public String toString() {
+        return "Building Name is: " + this.name;
+    }
+
 }
+
+
