@@ -12,7 +12,13 @@ public class Temperature extends Sensor{
         return measureValue();
     }
 
+    @Override
     public double measureValue(){
         return 15 + (Math.random() * 31);
+    }
+
+    @Override
+    public String getType(){
+        return "CO2";
     }
 }

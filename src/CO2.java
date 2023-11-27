@@ -15,4 +15,9 @@ public class CO2 extends Sensor{
     public double measureValue(){
         return 400 + (Math.random() * 600);
     }
+
+    @Override
+    public String getType(){
+        return "CO2";
+    }
 }
