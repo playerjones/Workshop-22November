@@ -39,7 +39,7 @@ public class Building {
 
     @Override
     public String toString() {
-        return "Building Name is: " + this.name;
+        return this.name;
     }
 
 

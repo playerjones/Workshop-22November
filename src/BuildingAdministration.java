@@ -28,7 +28,7 @@ public class BuildingAdministration {
     }
 
     public static void printBuildings() {
-        System.out.println(buildings);
+        System.out.println("Current existing buildings:\n" + buildings +"\n");
     }
     public static void main(String[] args) {
         buildings.add(new Building("House"));
@@ -38,9 +38,9 @@ public class BuildingAdministration {
         getBuilding(buildings.get(1)).addActuator(new VentilationActuator());
         getBuilding(buildings.get(1)).addSensor(new Temperature());
         getBuilding(buildings.get(1)).addSensor(new CO2());
-        for(int i = 0; i < 101; i++) {
-            getBuilding(buildings.get(1)).printStatus();
-        }
+
+        getBuilding(buildings.get(1)).printStatus();
+
 
 
     }
