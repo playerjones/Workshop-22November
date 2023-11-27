@@ -38,7 +38,10 @@ public class BuildingAdministration {
         getBuilding(buildings.get(1)).addActuator(new VentilationActuator());
         getBuilding(buildings.get(1)).addSensor(new Temperature());
         getBuilding(buildings.get(1)).addSensor(new CO2());
-        System.out.println("");
+        for(int i = 0; i < 101; i++) {
+            getBuilding(buildings.get(1)).printStatus();
+        }
+
 
     }
 }

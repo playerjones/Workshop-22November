@@ -30,7 +30,7 @@ public class Building {
     public void printStatus() {
         for(int i = 0; i < Sensors.size(); i++) {
             if(Sensors.get(i).getType().equals("Temp")) {
-                System.out.println("Temp: " + Sensors.get(i).getValue()) ;
+                System.out.println("Temp: " + Sensors.get(i).getValue());
             } else {
                 System.out.println("CO2: " + Sensors.get(i).getValue());
             }
