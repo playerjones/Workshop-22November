@@ -27,6 +27,16 @@ public class Building {
         Actuators.remove(actuator);
     }
 
+    public void printStatus() {
+        for(int i = 0; i < Sensors.size(); i++) {
+            if(Sensors.get(i).getType == "Temp") {
+                System.out.println("Temp: " + Sensors.get(i).getValue()) ;
+            } else {
+                System.out.println("CO2: " + Sensors.get(i).getValue());
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "Building Name is: " + this.name;

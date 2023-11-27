@@ -5,5 +5,4 @@ public abstract class Sensor {
     abstract public double getValue();
     abstract public double measureValue();
 
-    abstract public String getType();
 }
