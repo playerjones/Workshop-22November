@@ -31,10 +31,13 @@ public class BuildingAdministration {
         System.out.println("Current existing buildings:\n" + buildings +"\n");
     }
     public static void main(String[] args) {
+        System.out.println("Building Administation program is currently running.");
+
         buildings.add(new Building("House"));
         buildings.add(new Building("Hospital"));
         buildings.add(new Building("Home"));
         printBuildings();
+
         getBuilding(buildings.get(1)).addActuator(new VentilationActuator());
         getBuilding(buildings.get(1)).addSensor(new Temperature());
         getBuilding(buildings.get(1)).addSensor(new CO2());
