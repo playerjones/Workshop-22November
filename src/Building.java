@@ -2,8 +2,8 @@ package src;
 import java.util.ArrayList;
 
 public class Building {
-    ArrayList<String> Sensors = new ArrayList<>(1);
-    ArrayList<String> Actuators = new ArrayList<>(0);
+    ArrayList<Sensor> Sensors = new ArrayList<>();
+    ArrayList<Actuator> Actuators = new ArrayList<>();
 
     String name;
 
@@ -11,19 +11,19 @@ public class Building {
         this.name = name;
     }
 
-    public void addSensor(String sensors) {
+    public void addSensor(Sensor sensors) {
         Sensors.add(sensors);
     }
 
-    public void removeSensor(String sensors) {
+    public void removeSensor(Sensor sensors) {
         Sensors.remove(sensors);
     }
 
-    public void addActuator(String actuator) {
+    public void addActuator(Actuator actuator) {
         Actuators.add(actuator);
     }
 
-    public void removeActuator(String actuator) {
+    public void removeActuator(Actuator actuator) {
         Actuators.remove(actuator);
     }
 
